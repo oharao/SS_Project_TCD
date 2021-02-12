@@ -1,0 +1,14 @@
+# Change exicution policy allowing exicutables to be run
+Set-ExecutionPolicy Bypass
+
+# Download and install chocolatey 
+iwr https://chocolatey.org/install.ps1 -UseBasicParsing | iex
+
+# Install rsync using chocolatey
+choco install rsync
+
+# Verify intillation of rsync
+rsync --version
+
+# Reset exicution policy
+Set-ExecutionPolicy Restricted
